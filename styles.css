@@ -39,7 +39,7 @@ input[type="password"] {
   height: 100%;
   width: 0;
   background-color: #e70b0b;
-  transition: width 0.5 ease, background-color 0.5s ease;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
 #password-strength-text {

@@ -41,7 +41,7 @@ passwordInput.addEventListener("input", function () {
       strengthIndicator.style.backgroundColor = "#81C784";
       break;
     default:
-      strengthIndicator.style.backgroundColor = "#transparent";
+      strengthIndicator.style.backgroundColor = "transparent";
       break;
   }
 
