@@ -2,6 +2,7 @@ const passwordInput = document.querySelector("#passwordInput");
 
 passwordInput.addEventListener("input", function () {
   const password = this.value;
+
   const strengthIndicator = document.querySelector(
     "#password-strength-indicator"
   );
@@ -26,7 +27,25 @@ passwordInput.addEventListener("input", function () {
 
   const width = (score / 4) * 100;
 
-  strengthIndicator.computedStyleMap.width = `${width}%`;
+  switch (score) {
+    case 1:
+      strengthIndicator.style.backgroundColor = "#e70b0b";
+      break;
+    case 2:
+      strengthIndicator.style.backgroundColor = "#FFB74D";
+      break;
+    case 3:
+      strengthIndicator.style.backgroundColor = "#FFF176";
+      break;
+    case 4:
+      strengthIndicator.style.backgroundColor = "#81C784";
+      break;
+    default:
+      strengthIndicator.style.backgroundColor = "#transparent";
+      break;
+  }
+
+  strengthIndicator.style.width = `${width}%`;
 
   if (password.length > 0) {
     strengthText.innerHTML = `Força: ${strengths[score]}`;
